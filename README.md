@@ -61,22 +61,8 @@ sha256sum WinDump.mem > output/WinDump.mem.sha256
 md5sum WinDump.mem > output/WinDump.mem.md5
 ```
 
-## Notes on Findings
-
-See `forensic_report.md` for a full investigation write-up and IOCs. The analysis included evidence of anomalous processes, suspicious RWX memory regions flagged by `malfind`, and unusual outbound network activity. Use the report when triaging or performing incident response.
-
-## Recommended Next Steps
-
-- Isolate the affected host (if still online) and collect network captures for correlation.
-- Extract and preserve additional artifacts (registry hives, event logs, files) as needed.
-- Use targeted interactive analysis (Volatility, Rekall, or dynamic instrumentation) to extract in-memory artifacts such as dumped modules and shellcode for deeper analysis.
-
 ## Attribution & License
 
 This repository contains case materials for investigative purposes. No license is specified — treat the contents as case evidence and handle accordingly.
 
 ---
-
-If you want, I can:
-- commit this README to the repo, or
-- add a short CONTRIBUTING section and example commands for extracting specific IOCs.
